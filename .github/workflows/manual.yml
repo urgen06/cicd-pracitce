@@ -20,6 +20,11 @@ on:
           - Male
           - Female
 
+      marriage:
+        description: 'is Married?'
+        type: boolean
+        default: false
+
 jobs:
   manual:
     runs-on: ubuntu-latest
@@ -33,3 +38,6 @@ jobs:
 
       - name: Gender
         run: echo "${{ inputs.gender }}"
+
+      - name: is Married?
+        run: echo "${{ inputs.marriage }}"
