@@ -16,7 +16,7 @@ jobs:
           run: echo "name=Urgen Munikar" >> $GITHUB_OUTPUT
 
         - name: access output
-          run: echo "Name: ${{ steps.set-output.outputs.name }}
+          run: echo "Name: ${{ steps.set-output.outputs.name }}"
 
     job2:
       runs-on: ubuntu-latest
@@ -24,6 +24,6 @@ jobs:
 
       steps:
         - name: access output
-          run: echo "Name from job1 is ${{ needs.job1.outputs.job1_name }}
+          run: echo "Name from job1 is ${{ needs.job1.outputs.job1_name }}"
           
         
