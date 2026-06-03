@@ -17,5 +17,7 @@ jobs:
           echo "age=22" >> $GITHUB_OUTPUT
 
       - name: access output
-        run: echo "Name: ${{ steps.set-output.outputs.name}}"
-        run: echo "Age: ${{ steps.set-output.outputs.age}}"
+        run: |
+          echo "Name: ${{ steps.set-output.outputs.name}}"
+          echo "Age: ${{ steps.set-output.outputs.age}}"
+  
