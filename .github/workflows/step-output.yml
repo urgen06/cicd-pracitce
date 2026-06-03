@@ -15,8 +15,7 @@ jobs:
         run: |
           echo "name=Urgen Munikar" >> $GITHUB_OUTPUT
           echo "age=22" >> $GITHUB_OUTPUT
-
-    steps:
+          
       - name: set output 2
         id: set-output2
         shell: bash
