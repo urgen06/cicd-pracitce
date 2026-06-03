@@ -9,15 +9,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: set output
-        id: set-output
+      - name: set output 1
+        id: set-output1
         shell: bash
         run: |
           echo "name=Urgen Munikar" >> $GITHUB_OUTPUT
           echo "age=22" >> $GITHUB_OUTPUT
 
-      - name: access output
+    steps:
+      - name: set output 2
+        id: set-output2
+        shell: bash
         run: |
-          echo "Name: ${{ steps.set-output.outputs.name}}"
-          echo "Age: ${{ steps.set-output.outputs.age}}"
+          echo "address=Nayabazar, Kathmandu" >> $GITHUB_OUTPUT
+          echo "email=urgenmunikar06@gmail.com" >> $GITHUB_OUTPUT
+
+      - name: access output 1
+        run: |
+          echo "Name: ${{ steps.set-output1.outputs.name}}"
+          echo "Email: ${{ steps.set-output2.outputs.email}}"
+          
+      - name: access output 2
+        run: |
+          echo "Address: ${{ steps.set-output2.outputs.address}}"
+          echo "Age: ${{ steps.set-output1.outputs.age}}"
   
