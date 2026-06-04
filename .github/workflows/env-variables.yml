@@ -1,0 +1,22 @@
+name: Environment Vairables
+
+on: 
+  push: 
+    branches: [main]
+
+env:
+  CHANNEL_NAME: Urgen Git
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greetings
+        run: echo "Hello $CHANNEL_NAME !"
+
+      - name: Access repository variable
+        run: echo ${{ vars.USERNAME }}
+
+      - name: Access repository secret
+        run: echo ${{ secrets.UERNAME}}
